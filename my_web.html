@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello, World!</title>
+        <style>
+            /* General Styling */
+            body {
+                background-color: skyblue;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 20px;
+            }
+
+            /* Header */
+            header {
+                padding: 20px;
+                background: linear-gradient(to right, #222211, #444422);
+                color: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Main Content */
+            main {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                max-width: 600px;
+                margin: 20px auto;
+            }
+
+            /* Text & Links */
+            p {
+                color: #111;
+            }
+
+            a {
+                color: #0056b3;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>      
+    <body>
+        <header>
+            <h1>Hello, World!</h1>
+        </header>
+        <main>
+            <p>
+                This is just a simple webpage. It's clean and lightweight.
+                You can modify and improve it further until it becomes the perfect website. <br><br>
+                Now, the time is: <span id="currentTime"></span><br>
+                For more tips, visit <a href="https://www.w3schools.com/html/" target="_blank">W3 Schools HTML tutorial</a>.
+            </p>
+        </main>
+        <script>
+            function showTime() {
+                document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+            }
+            showTime();
+            setInterval(showTime, 1000);
+        </script>
+    </body>
+</html>
